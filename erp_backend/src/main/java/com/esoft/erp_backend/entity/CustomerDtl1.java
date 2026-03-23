@@ -10,6 +10,7 @@ import lombok.*;
 public class CustomerDtl1 {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long consId;
 	private String cons;
 	private String cAddress1;

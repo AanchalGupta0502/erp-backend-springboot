@@ -11,6 +11,7 @@ import lombok.*;
 public class CustomerDtl {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long sNo;     
 	private String name;        		
 	private String person;      	
