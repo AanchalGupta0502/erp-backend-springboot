@@ -53,10 +53,10 @@ import lombok.*;
 	private String persons;     		
 	private String reason;      	
 	
-	@OneToMany(mappedBy="customer",cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="customer",cascade=CascadeType.ALL,orphanRemoval=true)
 	private List<CustomerDtl> contactPersons;
 	
-	@OneToMany(mappedBy="customer",cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="customer",cascade=CascadeType.ALL,orphanRemoval=true)
 	private List<CustomerDtl1> consignees;
 	
 	
