@@ -1,7 +1,7 @@
 package com.esoft.erp_backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name="customer_dtl")
 @Getter
@@ -18,5 +18,6 @@ public class CustomerDtl {
 	private String desig; 
 	@ManyToOne
 	@JoinColumn(name="entry_no")
+	@JsonIgnore
 	private Customer customer;
 }

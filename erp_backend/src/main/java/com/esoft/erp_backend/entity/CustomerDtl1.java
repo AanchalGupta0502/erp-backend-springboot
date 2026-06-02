@@ -1,5 +1,6 @@
 package com.esoft.erp_backend.entity;
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 @Entity
 @Table(name="customer_dtl1")
@@ -33,5 +34,6 @@ public class CustomerDtl1 {
 	
 	@ManyToOne
 	@JoinColumn(name="entry_no")
+	@JsonIgnore
 	private Customer customer;
 }
