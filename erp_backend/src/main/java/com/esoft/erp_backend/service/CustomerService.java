@@ -43,6 +43,8 @@ public class CustomerService {
 	}
 	
 	public Customer updateCustomer(Long id, Customer customer) {
+		System.out.println("Path ID = " + id);
+
 		customer.setEntryNo(id);
 		
 		if(customer.getContactPersons()!=null) {
@@ -56,6 +58,8 @@ public class CustomerService {
 				dtl1.setCustomer(customer);
 			}
 		}
+		System.out.println("Customer EntryNo After Set = " + customer.getEntryNo());
+		
 		return customerRepository.save(customer);
 	}
 }
