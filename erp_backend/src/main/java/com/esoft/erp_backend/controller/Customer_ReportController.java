@@ -21,7 +21,10 @@ import com.lowagie.text.pdf.PdfWriter;
 
 @RestController
 @RequestMapping("/api/customerReport")
-@CrossOrigin("http://localhost:5173")
+/*@CrossOrigin("http://localhost:5173")*/
+@CrossOrigin(origins = {
+	    "https://erp-frontend-eta-mocha.vercel.app"
+	})
 public class Customer_ReportController {
 	
 	@Autowired
