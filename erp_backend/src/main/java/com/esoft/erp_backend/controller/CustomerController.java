@@ -9,7 +9,7 @@ import com.esoft.erp_backend.service.CustomerService;
 
 @RestController
 @RequestMapping("/api/customers")
-//@CrossOrigin(origins = "http://localhost:5173")
+/*@CrossOrigin(origins = "http://localhost:5173")*/
 @CrossOrigin(origins = {
 	    "https://erp-frontend-eta-mocha.vercel.app"
 	})
